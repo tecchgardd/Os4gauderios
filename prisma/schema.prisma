@@ -1,0 +1,126 @@
+// Banco do site (Postgres no Neon).
+// Tabelas do login (User, Session, Account, Verification) seguem o formato do Better Auth.
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+/* ---------- login (Better Auth) ---------- */
+
+model User {
+  id              String    @id
+  name            String
+  // o Better Auth exige e-mail; o painel usa um interno (usuario@painel.local) que ninguém vê
+  email           String    @unique
+  emailVerified   Boolean   @default(false)
+  image           String?
+  username        String?   @unique
+  displayUsername String?
+  role            String    @default("editor") // admin | editor
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @default(now()) @updatedAt
+  sessions        Session[]
+  accounts        Account[]
+
+  @@map("user")
+}
+
+model Session {
+  id        String   @id
+  expiresAt DateTime
+  token     String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  ipAddress String?
+  userAgent String?
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("session")
+}
+
+model Account {
+  id                    String    @id
+  accountId             String
+  providerId            String
+  userId                String
+  user                  User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  accessToken           String?
+  refreshToken          String?
+  idToken               String?
+  accessTokenExpiresAt  DateTime?
+  refreshTokenExpiresAt DateTime?
+  scope                 String?
+  password              String?
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+
+  @@index([userId])
+  @@map("account")
+}
+
+model Verification {
+  id         String   @id
+  identifier String
+  value      String
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @default(now()) @updatedAt
+
+  @@index([identifier])
+  @@map("verification")
+}
+
+/* ---------- conteúdo do site ---------- */
+
+// perfil da empresa (contatos e links) e outros ajustes, guardados como JSON
+model Setting {
+  key   String @id
+  value Json
+
+  @@map("settings")
+}
+
+// só os textos alterados no painel; o resto usa o valor original do registro
+model Text {
+  key       String   @id
+  value     String
+  updatedAt DateTime @default(now()) @updatedAt
+  updatedBy String?
+
+  @@map("texts")
+}
+
+// mídias trocadas no painel (arquivo no Cloudinary); sem linha = arquivo original de public/assets
+model Media {
+  slot      String   @id
+  url       String
+  publicId  String
+  type      String // image | video | raw
+  meta      Json?
+  updatedAt DateTime @default(now()) @updatedAt
+  updatedBy String?
+
+  @@map("media")
+}
+
+model Show {
+  id     Int    @id @default(autoincrement())
+  data   String // AAAA-MM-DD
+  hora   String @default("")
+  cidade String
+  uf     String
+  evento String
+  local  String @default("")
+  link   String @default("")
+  status String @default("")
+
+  @@index([data])
+  @@map("agenda")
+}

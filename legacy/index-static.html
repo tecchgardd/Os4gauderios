@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Os 4 Gaudérios | Onde tem tradição, tem baile</title>
+<meta name="description" content="Os 4 Gaudérios — desde 1997 levando o fandango gaúcho de galpão em galpão. Clipes, músicas, estrutura de turnê e contratação de shows.">
+<meta name="theme-color" content="#0b0806">
+<meta property="og:title" content="Os 4 Gaudérios">
+<meta property="og:description" content="Desde 1997 levando o fandango gaúcho para bailes, rodeios e festas.">
+<meta property="og:image" content="assets/web/img/og.jpg">
+<link rel="icon" href="assets/web/img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/web/img/brasao.webp">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-loading">
+
+<!-- PRELOADER -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-crest">
+    <img src="assets/web/img/brasao.webp" alt="">
+    <span class="loader-shine"></span>
+  </div>
+  <div class="loader-count"><span id="loaderYear">1997</span></div>
+  <div class="loader-bar"><i id="loaderBar"></i></div>
+  <div class="loader-curtain loader-curtain--top"></div>
+  <div class="loader-curtain loader-curtain--bottom"></div>
+</div>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-label">Play</span></div>
+
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <!-- esquerda: menu + seção atual -->
+  <div class="nav-left">
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+      <span class="menu-btn-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="roll" aria-hidden="true"><span class="menu-btn-label" data-text="Menu">Menu</span></span>
+    </button>
+    <span class="nav-section" id="navSection" aria-live="polite">
+      <span class="nav-section-num"><b id="navSectionNum">00</b></span>
+      <span class="nav-section-name" id="navSectionName">Início</span>
+    </span>
+  </div>
+
+  <!-- centro: medalhão com anel de progresso -->
+  <a class="medal" href="#inicio" aria-label="Os 4 Gaudérios — voltar ao início">
+    <svg class="medal-text" viewBox="0 0 120 120" aria-hidden="true">
+      <defs><path id="medalPath" d="M60,60 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0"/></defs>
+      <text><textPath href="#medalPath" textLength="312" lengthAdjust="spacing">OS 4 GAUDÉRIOS • DESDE 1997 • FANDANGO GAÚCHO •</textPath></text>
+    </svg>
+    <svg class="medal-ring" viewBox="0 0 100 100" aria-hidden="true">
+      <circle class="medal-track" cx="50" cy="50" r="47"/>
+      <circle class="medal-progress" id="medalProgress" cx="50" cy="50" r="47" pathLength="100"/>
+    </svg>
+    <span class="medal-core"><img src="assets/web/img/brasao-sm.webp" alt="" width="160" height="150"></span>
+  </a>
+
+  <!-- direita: contratação + redes -->
+  <div class="nav-right">
+    <a class="nav-cta" href="https://wa.me/5554999170670?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20uma%20data%20para%20um%20show%20dos%204%20Gaud%C3%A9rios." target="_blank" rel="noopener">
+      <span class="roll"><span data-text="Contratar show">Contratar show</span></span>
+      <i class="nav-cta-arrow" aria-hidden="true">↗</i>
+    </a>
+    <div class="nav-social">
+      <a data-link="instagram" href="https://www.instagram.com/os4gauderios/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ico ico--instagram"></i></a>
+      <a data-link="youtube" href="https://www.youtube.com/channel/UCXpdSMd86H9QW_qrxTTjTLw" target="_blank" rel="noopener" aria-label="YouTube"><i class="ico ico--youtube"></i></a>
+      <a data-link="facebook" href="https://www.facebook.com/search/top?q=Os%204%20Gaud%C3%A9rios" target="_blank" rel="noopener" aria-label="Facebook"><i class="ico ico--facebook"></i></a>
+      <a data-link="tiktok" href="https://www.tiktok.com/search?q=os4gauderios" target="_blank" rel="noopener" aria-label="TikTok"><i class="ico ico--tiktok"></i></a>
+    </div>
+  </div>
+</header>
+
+<!-- MENU TELA CHEIA -->
+<div class="menu" id="menu" aria-hidden="true">
+  <div class="menu-glow" aria-hidden="true"></div>
+  <div class="menu-inner">
+    <nav class="menu-links" aria-label="Menu principal">
+      <a href="#historia" data-img="assets/web/img/brasao.webp" style="--i:0"><small>01</small><span>História</span></a>
+      <a href="#formacao" data-img="assets/web/img/grupo-poncho.webp" style="--i:1"><small>02</small><span>Formação</span></a>
+      <a href="#clipes" data-img="assets/web/video/beijo.jpg" style="--i:2"><small>03</small><span>Clipes</span></a>
+      <a href="#agenda" data-img="assets/web/video/hero.jpg" style="--i:3"><small>04</small><span>Agenda</span></a>
+      <a href="#musicas" data-img="assets/web/img/grupo-instrumentos.webp" style="--i:4"><small>05</small><span>Músicas</span></a>
+      <a href="#estrada" data-img="assets/web/img/onibus.webp" style="--i:5"><small>06</small><span>Estrada</span></a>
+      <a href="#divulgacao" data-img="assets/web/img/press-post.webp" style="--i:6"><small>07</small><span>Divulgação</span></a>
+      <a href="#redes" data-img="assets/web/img/grupo-sentados.webp" style="--i:7"><small>08</small><span>Redes</span></a>
+      <a href="#contato" data-img="assets/web/img/van.webp" style="--i:8"><small>09</small><span>Contato</span></a>
+    </nav>
+    <div class="menu-preview" aria-hidden="true"><img id="menuPreview" src="assets/web/img/brasao.webp" alt=""></div>
+    <div class="menu-foot">
+      <div>
+        <p class="eyebrow">Redes</p>
+        <div class="menu-icons">
+          <a data-link="instagram" href="https://www.instagram.com/os4gauderios/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ico ico--instagram"></i></a>
+          <a data-link="youtube" href="https://www.youtube.com/channel/UCXpdSMd86H9QW_qrxTTjTLw" target="_blank" rel="noopener" aria-label="YouTube"><i class="ico ico--youtube"></i></a>
+          <a data-link="facebook" href="https://www.facebook.com/search/top?q=Os%204%20Gaud%C3%A9rios" target="_blank" rel="noopener" aria-label="Facebook"><i class="ico ico--facebook"></i></a>
+          <a data-link="tiktok" href="https://www.tiktok.com/search?q=os4gauderios" target="_blank" rel="noopener" aria-label="TikTok"><i class="ico ico--tiktok"></i></a>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">Ouça</p>
+        <div class="menu-icons">
+          <a data-link="spotify" href="https://open.spotify.com/playlist/2GgI7gHwBuifjeRIqPCsfA" target="_blank" rel="noopener" aria-label="Spotify"><i class="ico ico--spotify"></i></a>
+          <a data-link="youtubemusic" href="https://music.youtube.com/search?q=Os%204%20Gaud%C3%A9rios" target="_blank" rel="noopener" aria-label="YouTube Music"><i class="ico ico--youtubemusic"></i></a>
+          <a data-link="deezer" href="https://www.deezer.com/search/Os%204%20Gaud%C3%A9rios" target="_blank" rel="noopener" aria-label="Deezer"><i class="ico ico--deezer"></i></a>
+          <a data-link="applemusic" href="https://music.apple.com/br/search?term=Os%204%20Gaud%C3%A9rios" target="_blank" rel="noopener" aria-label="Apple Music"><i class="ico ico--applemusic"></i></a>
+          <a data-link="palcomp3" href="https://www.palcomp3.com.br/os4gauderiosoficial/" target="_blank" rel="noopener" aria-label="Palco MP3"><i class="ico ico--palcomp3"></i></a>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow">Contratações</p>
+        <a class="menu-contact" href="https://wa.me/5554999170670" target="_blank" rel="noopener">(54) 99917-0670</a>
+        <a class="menu-contact menu-contact--sm" href="mailto:altouruguaieventos@gmail.com">altouruguaieventos@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<!-- 1. HERO: vídeo em tela cheia que encolhe no scroll -->
+<section class="hero" id="inicio">
+  <div class="hero-stage">
+    <div class="hero-media" id="heroMedia">
+      <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/web/video/hero.jpg">
+        <source src="assets/web/video/hero.mp4" type="video/mp4">
+      </video>
+      <div class="hero-shade"></div>
+    </div>
+
+    <div class="hero-copy" id="heroCopy">
+      <p class="eyebrow hero-eyebrow"><span class="dot"></span> Fandango gaúcho · Erechim · RS</p>
+      <h1 class="hero-title" aria-label="Os 4 Gaudérios">
+        <span class="hero-line"><span class="hero-os">Os</span></span>
+        <span class="hero-line hero-line--big"><span class="hero-4">4</span><span class="hero-word">Gaudérios</span></span>
+      </h1>
+      <p class="hero-sub">Onde tem <em>tradição</em>, tem baile.</p>
+    </div>
+
+    <div class="hero-after" id="heroAfter">
+      <p class="eyebrow">Desde 17 de agosto de 1997</p>
+      <p class="hero-after-title">Vinte e nove anos fazendo <em>o salão tremer.</em></p>
+    </div>
+
+    <a class="scroll-cue" href="#historia" aria-label="Rolar para a história">
+      <span>Role</span><i></i>
+    </a>
+  </div>
+</section>
+
+<!-- 2. MANIFESTO: palavras acendem no scroll -->
+<section class="manifesto" id="historia">
+  <div class="wrap">
+    <p class="eyebrow">Nossa história</p>
+    <p class="manifesto-text" data-reveal-words>
+      Foi em 1997 que a cordeona abriu o primeiro fole. Desde então, Os 4 Gaudérios atravessam o Sul de galpão em galpão, de rodeio em rodeio, levando a vaneira para quem não deixa a pista esfriar. É música feita de estrada, de lenço no pescoço e de gente que dança até o último acorde.
+    </p>
+  </div>
+</section>
+
+<!-- 3. NÚMEROS -->
+<section class="stats">
+  <div class="wrap stats-grid">
+    <div class="stat"><strong data-count="1997" data-from="1950">1997</strong><span>Ano de fundação</span></div>
+    <div class="stat"><strong><b data-count="29">29</b></strong><span>Anos de estrada</span></div>
+    <div class="stat"><strong><b data-count="4">4</b></strong><span>Clipes oficiais em 4K</span></div>
+    <div class="stat"><strong>RS</strong><span>Erechim, Alto Uruguai</span></div>
+  </div>
+</section>
+
+<!-- 4. BRASÃO: peça fixada, gira e acende -->
+<section class="crest" id="brasao">
+  <div class="crest-stage">
+    <div class="crest-sun" id="crestSun"></div>
+    <div class="crest-rays" aria-hidden="true"></div>
+    <div class="crest-wrap" id="crestWrap">
+      <div class="crest-tilt" id="crestTilt">
+        <img class="crest-img" src="assets/web/img/brasao.webp" alt="Brasão dourado dos 4 Gaudérios: quatro cavaleiros ao pôr do sol" width="1100" height="1032" loading="lazy">
+        <span class="crest-glare" id="crestGlare"></span>
+      </div>
+    </div>
+    <ul class="crest-words" aria-label="O que o brasão carrega">
+      <li data-side="l"><span>01</span>Quatro cavaleiros</li>
+      <li data-side="r"><span>02</span>Um pôr do sol</li>
+      <li data-side="l"><span>03</span>Ouro de tradição</li>
+      <li data-side="r"><span>04</span>Uma só tropa</li>
+    </ul>
+    <p class="crest-caption">O brasão que vai estampado<br>no ônibus, no caminhão e no peito.</p>
+  </div>
+</section>
+
+<!-- 5. FORMAÇÃO: fotos trocam no scroll -->
+<section class="lineup" id="formacao">
+  <div class="lineup-stage">
+    <div class="lineup-bgword" aria-hidden="true"><span>Gaudérios Gaudérios Gaudérios</span></div>
+    <div class="lineup-copy">
+      <p class="eyebrow">A formação</p>
+      <div class="lineup-captions">
+        <h2 class="lineup-cap is-active"><em>De poncho</em> e chapéu.</h2>
+        <h2 class="lineup-cap"><em>Cordeona</em> no peito.</h2>
+        <h2 class="lineup-cap"><em>A tropa</em> reunida.</h2>
+      </div>
+      <p class="lineup-text">Cordeonas, violão, baixo, bateria e voz. Uma formação que sobe no palco pronta pra segurar o baile do primeiro ao último fandangueiro.</p>
+      <div class="lineup-dots"><i class="is-active"></i><i></i><i></i></div>
+    </div>
+    <div class="lineup-photos">
+      <img class="lineup-photo is-active" src="assets/web/img/grupo-poncho.webp" alt="Integrantes dos 4 Gaudérios de poncho, chapéu e lenço vermelho" loading="lazy">
+      <img class="lineup-photo" src="assets/web/img/grupo-instrumentos.webp" alt="Integrantes com cordeonas, baixo e pilcha gaúcha" loading="lazy">
+      <img class="lineup-photo" src="assets/web/img/grupo-sentados.webp" alt="Grupo reunido com cordeonas, violão e baixo" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- 6. CLIPES: tela fixa troca por capítulo -->
+<section class="clips" id="clipes">
+  <div class="wrap clips-head">
+    <p class="eyebrow">Clipes oficiais</p>
+    <h2 class="display">Cinema<br><em>de galpão.</em></h2>
+    <p class="lead">Quatro produções em 4K, gravadas onde o fandango acontece de verdade.</p>
+  </div>
+
+  <div class="clips-body">
+    <div class="clips-screen" id="clipsScreen">
+      <div class="clips-screen-inner">
+        <video data-clip="0" class="is-active" muted loop playsinline preload="none" poster="assets/web/video/andejo.jpg" data-src="assets/web/video/andejo.mp4"></video>
+        <video data-clip="1" muted loop playsinline preload="none" poster="assets/web/video/doma.jpg" data-src="assets/web/video/doma.mp4"></video>
+        <video data-clip="2" muted loop playsinline preload="none" poster="assets/web/video/beijo.jpg" data-src="assets/web/video/beijo.mp4"></video>
+        <video data-clip="3" muted loop playsinline preload="none" poster="assets/web/video/vanera.jpg" data-src="assets/web/video/vanera.mp4"></video>
+        <div class="clips-screen-ui">
+          <span class="rec"><i></i> 4K</span>
+          <span class="clips-counter"><b id="clipNum">01</b> / 04</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="clips-list">
+      <article class="clip" data-index="0">
+        <span class="clip-num">01</span>
+        <h3>Andejo</h3>
+        <p>Galpão de madeira, luz âmbar e a banda inteira em cena. Um clipe que tem cheiro de baile.</p>
+        <button class="btn btn-ghost" data-preview="assets/web/video/andejo-preview.mp4" data-title="Andejo"><span>▶ Assistir trecho com som</span></button>
+        <video class="clip-mobile" muted loop playsinline preload="none" poster="assets/web/video/andejo.jpg" data-src="assets/web/video/andejo.mp4"></video>
+      </article>
+      <article class="clip" data-index="1">
+        <span class="clip-num">02</span>
+        <h3>Doma de um Amor Perfeito</h3>
+        <p>Uma história de amor contada entre cavalos, cordeonas e um salão lotado. Cinema gaúcho de ponta a ponta.</p>
+        <button class="btn btn-ghost" data-preview="assets/web/video/doma-preview.mp4" data-title="Doma de um Amor Perfeito"><span>▶ Assistir trecho com som</span></button>
+        <video class="clip-mobile" muted loop playsinline preload="none" poster="assets/web/video/doma.jpg" data-src="assets/web/video/doma.mp4"></video>
+      </article>
+      <article class="clip" data-index="2">
+        <span class="clip-num">03</span>
+        <h3>Um Beijo Embaixo do Chapéu</h3>
+        <p>Do acampamento do rodeio até o palco iluminado. O clipe que mostra o show como ele é.</p>
+        <button class="btn btn-ghost" data-preview="assets/web/video/beijo-preview.mp4" data-title="Um Beijo Embaixo do Chapéu"><span>▶ Assistir trecho com som</span></button>
+        <video class="clip-mobile" muted loop playsinline preload="none" poster="assets/web/video/beijo.jpg" data-src="assets/web/video/beijo.mp4"></video>
+      </article>
+      <article class="clip" data-index="3">
+        <span class="clip-num">04</span>
+        <h3>Vanera Varre Galpão</h3>
+        <p>Bota no assoalho, poeira subindo e a vaneira no talo. O nome já diz tudo.</p>
+        <button class="btn btn-ghost" data-preview="assets/web/video/vanera-preview.mp4" data-title="Vanera Varre Galpão"><span>▶ Assistir trecho com som</span></button>
+        <video class="clip-mobile" muted loop playsinline preload="none" poster="assets/web/video/vanera.jpg" data-src="assets/web/video/vanera.mp4"></video>
+      </article>
+    </div>
+  </div>
+
+  <div class="wrap clips-foot">
+    <a class="link-arrow" href="https://www.youtube.com/channel/UCXpdSMd86H9QW_qrxTTjTLw" target="_blank" rel="noopener">Ver todos os clipes no YouTube <span>↗</span></a>
+  </div>
+</section>
+
+<!-- 7. VANERA: texto vazado com vídeo, zoom pra dentro -->
+<section class="knockout" id="vanera">
+  <div class="knockout-stage">
+    <video class="knockout-video" muted loop playsinline preload="none" poster="assets/web/video/pes.jpg" data-src="assets/web/video/pes.mp4"></video>
+    <div class="knockout-mask" id="knockoutMask"><span>VANERA</span></div>
+    <div class="knockout-after" id="knockoutAfter">
+      <p class="eyebrow">Ao vivo</p>
+      <p class="knockout-title">A pista<br><em>não para.</em></p>
+    </div>
+  </div>
+</section>
+
+<!-- 8. AGENDA: alimentada por js/agenda.js -->
+<section class="agenda" id="agenda">
+  <div class="wrap">
+    <div class="agenda-head">
+      <div>
+        <p class="eyebrow">Agenda</p>
+        <h2 class="display">Próximos<br><em>bailes.</em></h2>
+      </div>
+      <p class="lead">Onde a cordeona vai abrir o fole nas próximas semanas. Confira a data mais perto de você e chegue cedo.</p>
+    </div>
+
+    <div class="agenda-next" id="agendaNext" hidden></div>
+    <div class="agenda-list" id="agendaList" aria-live="polite"></div>
+
+    <div class="agenda-empty" id="agendaEmpty" hidden>
+      <img src="assets/web/img/brasao-sm.webp" alt="" width="80" height="75">
+      <div>
+        <h3>Novas datas em breve.</h3>
+        <p>A agenda está sendo atualizada. Acompanhe as divulgações no Instagram ou consulte uma data para o seu evento.</p>
+      </div>
+      <a class="btn btn-ghost" href="https://www.instagram.com/os4gauderios/" target="_blank" rel="noopener"><span>Ver no Instagram ↗</span></a>
+    </div>
+
+    <div class="agenda-past" id="agendaPast" hidden>
+      <div class="agenda-past-head">
+        <h3 id="agendaPastTitle">Por onde o baile passou</h3>
+        <span id="agendaPastCount"></span>
+      </div>
+      <div class="agenda-list" id="agendaPastList"></div>
+    </div>
+
+    <div class="agenda-foot">
+      <p>Quer o baile na sua cidade?</p>
+      <a class="link-arrow" href="https://wa.me/5554999170670?text=Ol%C3%A1%2C%20gostaria%20de%20consultar%20uma%20data%20para%20um%20show%20dos%204%20Gaud%C3%A9rios." target="_blank" rel="noopener">Consultar uma data <span>↗</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- 9. MÚSICAS -->
+<section class="music" id="musicas">
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Andejo</span><i>✦</i><span>Doma de um Amor Perfeito</span><i>✦</i><span>Um Beijo Embaixo do Chapéu</span><i>✦</i><span>Vanera Varre Galpão</span><i>✦</i>
+      <span>Andejo</span><i>✦</i><span>Doma de um Amor Perfeito</span><i>✦</i><span>Um Beijo Embaixo do Chapéu</span><i>✦</i><span>Vanera Varre Galpão</span><i>✦</i>
+    </div>
+  </div>
+  <div class="marquee marquee--reverse" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Trancão de Livramento</span><i>✦</i><span>Fibra Galponeira</span><i>✦</i><span>Louco de Bem de Bem</span><i>✦</i><span>Na Muvuca da Neguinha</span><i>✦</i><span>Eu Cutuco e Tu Cutuca</span><i>✦</i>
+      <span>Trancão de Livramento</span><i>✦</i><span>Fibra Galponeira</span><i>✦</i><span>Louco de Bem de Bem</span><i>✦</i><span>Na Muvuca da Neguinha</span><i>✦</i><span>Eu Cutuco e Tu Cutuca</span><i>✦</i>
+    </div>
+  </div>
+
+  <div class="wrap music-grid">
+    <div class="music-copy">
+      <p class="eyebrow">Repertório</p>
+      <h2 class="display">O som que<br><em>acende o salão.</em></h2>
+      <p class="lead">Vaneira, vanerão, bugio e xote. Dá o play na playlist oficial e já vai se preparando pro baile.</p>
+      <div class="music-actions">
+        <a class="btn btn-gold magnetic" data-link="spotify" href="https://open.spotify.com/playlist/2GgI7gHwBuifjeRIqPCsfA" target="_blank" rel="noopener"><span>Abrir no Spotify ↗</span></a>
+        <a class="btn btn-ghost magnetic" data-link="palcomp3" href="https://www.palcomp3.com.br/os4gauderiosoficial/" target="_blank" rel="noopener"><span>Palco MP3 ↗</span></a>
+      </div>
+    </div>
+    <div class="player">
+      <div class="player-head">
+        <span class="player-badge"><i class="ico ico--spotify"></i> Playlist no Spotify</span>
+        <span class="eq eq--live" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      </div>
+      <div class="player-frame">
+        <iframe title="Playlist Os 4 Gaudérios no Spotify" src="https://open.spotify.com/embed/playlist/2GgI7gHwBuifjeRIqPCsfA?utm_source=generator&amp;theme=0" width="100%" height="452" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap platforms">
+    <div class="platforms-head">
+      <p class="eyebrow">Plataformas digitais</p>
+      <h3>Ouça onde<br><em>você quiser.</em></h3>
+    </div>
+    <div class="platform-grid">
+      <a class="platform" data-link="spotify" href="https://open.spotify.com/playlist/2GgI7gHwBuifjeRIqPCsfA" target="_blank" rel="noopener" style="--brand:#1DB954"><i class="ico ico--spotify"></i><span><strong>Spotify</strong><small>Ouvir agora</small></span><b aria-hidden="true">↗</b></a>
+      <a class="platform" data-link="youtubemusic" href="https://music.youtube.com/search?q=Os%204%20Gaud%C3%A9rios" target="_blank" rel="noopener" style="--brand:#FF0033"><i class="ico ico--youtubemusic"></i><span><strong>YouTube Music</strong><small>Ouvir agora</small></span><b aria-hidden="true">↗</b></a>
+      <a class="platform" data-link="deezer" href="https://www.deezer.com/search/Os%204%20Gaud%C3%A9rios" target="_blank" rel="noopener" style="--brand:#A238FF"><i class="ico ico--deezer"></i><span><strong>Deezer</strong><small>Ouvir agora</small></span><b aria-hidden="true">↗</b></a>
+      <a class="platform" data-link="applemusic" href="https://music.apple.com/br/search?term=Os%204%20Gaud%C3%A9rios" target="_blank" rel="noopener" style="--brand:#FA243C"><i class="ico ico--applemusic"></i><span><strong>Apple Music</strong><small>Ouvir agora</small></span><b aria-hidden="true">↗</b></a>
+      <a class="platform" data-link="amazonmusic" href="https://music.amazon.com.br/search/Os%204%20Gaud%C3%A9rios" target="_blank" rel="noopener" style="--brand:#25D1DA"><i class="ico ico--amazonmusic"></i><span><strong>Amazon Music</strong><small>Ouvir agora</small></span><b aria-hidden="true">↗</b></a>
+      <a class="platform" data-link="palcomp3" href="https://www.palcomp3.com.br/os4gauderiosoficial/" target="_blank" rel="noopener" style="--brand:#F26522"><i class="ico ico--palcomp3"></i><span><strong>Palco MP3</strong><small>Ouvir agora</small></span><b aria-hidden="true">↗</b></a>
+    </div>
+  </div>
+</section>
+
+<!-- 10. ESTRADA: scroll horizontal da frota -->
+<section class="road" id="estrada">
+  <div class="road-stage">
+    <div class="road-track" id="roadTrack">
+      <div class="road-panel road-intro">
+        <p class="eyebrow">Na estrada</p>
+        <h2 class="display">Estrutura<br>própria<br><em>de turnê.</em></h2>
+        <p class="lead">Ônibus, caminhão e van com a marca da casa. Do Alto Uruguai para onde o baile chamar.</p>
+        <span class="road-hint">Continue rolando <i>→</i></span>
+      </div>
+      <figure class="road-panel road-vehicle">
+        <span class="road-word" aria-hidden="true">Ônibus</span>
+        <img src="assets/web/img/onibus.webp" alt="Ônibus de turnê preto com o letreiro Os 4 Gaudérios" loading="lazy">
+        <figcaption><b>01</b> O ônibus <span>leva a banda com conforto de cidade em cidade.</span></figcaption>
+      </figure>
+      <figure class="road-panel road-vehicle">
+        <span class="road-word" aria-hidden="true">Caminhão</span>
+        <img src="assets/web/img/caminhao.webp" alt="Caminhão baú preto com o brasão dourado dos 4 Gaudérios" loading="lazy">
+        <figcaption><b>02</b> O caminhão <span>carrega som, luz e palco para cada show.</span></figcaption>
+      </figure>
+      <figure class="road-panel road-vehicle">
+        <span class="road-word" aria-hidden="true">Van</span>
+        <img src="assets/web/img/van.webp" alt="Van preta com o brasão e os contatos dos 4 Gaudérios" loading="lazy">
+        <figcaption><b>03</b> A van <span>vai na frente, abrindo caminho para a produção.</span></figcaption>
+      </figure>
+    </div>
+    <div class="road-line" aria-hidden="true"><i id="roadLine"></i></div>
+  </div>
+</section>
+
+<!-- 11. DIVULGAÇÃO: artes e fotos para baixar -->
+<section class="press" id="divulgacao">
+  <div class="wrap">
+    <div class="press-head">
+      <div>
+        <p class="eyebrow">Kit de divulgação</p>
+        <h2 class="display">Artes & fotos<br><em>para divulgar.</em></h2>
+      </div>
+      <div class="press-head-side">
+        <p class="lead">Material oficial em alta resolução para contratantes, CTGs, imprensa e parceiros anunciarem o baile.</p>
+        <a class="btn btn-gold magnetic" href="assets/os4gauderios-kit-divulgacao.zip" download><span>↓ Baixar kit completo · ZIP 14,8 MB</span></a>
+      </div>
+    </div>
+
+    <div class="press-tabs" role="group" aria-label="Filtrar material">
+      <button class="is-active" data-filter="all" aria-pressed="true">Tudo <sup>14</sup></button>
+      <button data-filter="artes" aria-pressed="false">Artes <sup>2</sup></button>
+      <button data-filter="clipes" aria-pressed="false">Clipes <sup>4</sup></button>
+      <button data-filter="logos" aria-pressed="false">Logos <sup>2</sup></button>
+      <button data-filter="fotos" aria-pressed="false">Fotos <sup>3</sup></button>
+      <button data-filter="frota" aria-pressed="false">Frota <sup>3</sup></button>
+    </div>
+
+    <div class="press-grid" id="pressGrid">
+      <figure class="asset asset--tall" data-cat="artes">
+        <a class="asset-thumb" href="assets/press/os4gauderios-story-instagram.jpg" target="_blank" rel="noopener"><img src="assets/web/img/press-story.webp" alt="Arte de story para Instagram: Leve o baile para a sua cidade" loading="lazy"></a>
+        <figcaption><div><strong>Story Instagram</strong><span>JPG · 1080×1920 · 0,3 MB</span></div><a class="asset-dl" href="assets/press/os4gauderios-story-instagram.jpg" download aria-label="Baixar story Instagram">↓</a></figcaption>
+      </figure>
+      <figure class="asset asset--tall" data-cat="artes">
+        <a class="asset-thumb" href="assets/press/os4gauderios-post-instagram.jpg" target="_blank" rel="noopener"><img src="assets/web/img/press-post.webp" alt="Arte de post para Instagram com o grupo e o contato de contratação" loading="lazy"></a>
+        <figcaption><div><strong>Post Instagram</strong><span>JPG · 1080×1350 · 0,2 MB</span></div><a class="asset-dl" href="assets/press/os4gauderios-post-instagram.jpg" download aria-label="Baixar post Instagram">↓</a></figcaption>
+      </figure>
+      <div class="asset asset-folder" data-cat="clipes">
+        <div>
+          <p class="eyebrow">Clipes para divulgação</p>
+          <h3>Monte o seu vídeo do baile.</h3>
+          <p>Cortes verticais prontos para Reels, Stories e Status, trechos com som e fotos em 4K tiradas dos clipes para usar em flyers. Os clipes completos em 4K ficam na pasta oficial.</p>
+        </div>
+        <div class="asset-folder-actions">
+          <a class="btn btn-gold magnetic" href="assets/os4gauderios-clipes-divulgacao.zip" download><span>↓ Pacote dos clipes · ZIP 69,6 MB</span></a>
+          <a class="btn btn-ghost magnetic" id="clipsFolder" href="https://wa.me/5554999170670?text=Ol%C3%A1!%20Gostaria%20de%20receber%20os%20clipes%20dos%204%20Gaud%C3%A9rios%20em%204K%20para%20divulgar%20o%20baile." target="_blank" rel="noopener"><span>Clipes completos em 4K ↗</span></a>
+        </div>
+      </div>
+      <figure class="asset asset--clip" data-cat="clipes">
+        <div class="asset-thumb"><video muted loop playsinline preload="none" poster="assets/web/video/andejo.jpg" data-src="assets/web/video/andejo.mp4"></video><span class="asset-badge">Clipe oficial</span></div>
+        <figcaption>
+          <strong>Andejo</strong>
+          <div class="chips">
+            <a href="assets/press/clipes/os4gauderios-andejo-vertical-15s.mp4" download>↓ Vertical 15s <em>10,6 MB</em></a>
+            <a href="assets/press/clipes/os4gauderios-andejo-trecho-30s.mp4" download>↓ Trecho 30s <em>7,8 MB</em></a>
+            <a href="assets/press/clipes/os4gauderios-andejo-foto-1.jpg" download>↓ Foto 4K</a>
+            <a href="assets/press/clipes/os4gauderios-andejo-foto-2.jpg" download>↓ Foto 4K</a>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="asset asset--clip" data-cat="clipes">
+        <div class="asset-thumb"><video muted loop playsinline preload="none" poster="assets/web/video/doma.jpg" data-src="assets/web/video/doma.mp4"></video><span class="asset-badge">Clipe oficial</span></div>
+        <figcaption>
+          <strong>Doma de um Amor Perfeito</strong>
+          <div class="chips">
+            <a href="assets/press/clipes/os4gauderios-doma-vertical-15s.mp4" download>↓ Vertical 15s <em>9,5 MB</em></a>
+            <a href="assets/press/clipes/os4gauderios-doma-trecho-30s.mp4" download>↓ Trecho 30s <em>5,4 MB</em></a>
+            <a href="assets/press/clipes/os4gauderios-doma-foto-1.jpg" download>↓ Foto 4K</a>
+            <a href="assets/press/clipes/os4gauderios-doma-foto-2.jpg" download>↓ Foto 4K</a>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="asset asset--clip" data-cat="clipes">
+        <div class="asset-thumb"><video muted loop playsinline preload="none" poster="assets/web/video/beijo.jpg" data-src="assets/web/video/beijo.mp4"></video><span class="asset-badge">Clipe oficial</span></div>
+        <figcaption>
+          <strong>Um Beijo Embaixo do Chapéu</strong>
+          <div class="chips">
+            <a href="assets/press/clipes/os4gauderios-beijo-vertical-15s.mp4" download>↓ Vertical 15s <em>9,0 MB</em></a>
+            <a href="assets/press/clipes/os4gauderios-beijo-trecho-30s.mp4" download>↓ Trecho 30s <em>7,3 MB</em></a>
+            <a href="assets/press/clipes/os4gauderios-beijo-foto-1.jpg" download>↓ Foto 4K</a>
+            <a href="assets/press/clipes/os4gauderios-beijo-foto-2.jpg" download>↓ Foto 4K</a>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="asset asset--clip" data-cat="clipes">
+        <div class="asset-thumb"><video muted loop playsinline preload="none" poster="assets/web/video/vanera.jpg" data-src="assets/web/video/vanera.mp4"></video><span class="asset-badge">Clipe oficial</span></div>
+        <figcaption>
+          <strong>Vanera Varre Galpão</strong>
+          <div class="chips">
+            <a href="assets/press/clipes/os4gauderios-vanera-vertical-15s.mp4" download>↓ Vertical 15s <em>9,6 MB</em></a>
+            <a href="assets/press/clipes/os4gauderios-vanera-trecho-30s.mp4" download>↓ Trecho 30s <em>7,3 MB</em></a>
+            <a href="assets/press/clipes/os4gauderios-vanera-foto-1.jpg" download>↓ Foto 4K</a>
+            <a href="assets/press/clipes/os4gauderios-vanera-foto-2.jpg" download>↓ Foto 4K</a>
+          </div>
+        </figcaption>
+      </figure>
+      <figure class="asset" data-cat="logos">
+        <a class="asset-thumb is-alpha" href="assets/press/os4gauderios-brasao-sem-fundo.png" target="_blank" rel="noopener"><img src="assets/web/img/brasao.webp" alt="Brasão sem fundo" loading="lazy"></a>
+        <figcaption><div><strong>Brasão sem fundo</strong><span>PNG · 1295×1215 · 1,8 MB</span></div><a class="asset-dl" href="assets/press/os4gauderios-brasao-sem-fundo.png" download aria-label="Baixar brasão sem fundo">↓</a></figcaption>
+      </figure>
+      <figure class="asset" data-cat="logos">
+        <a class="asset-thumb" href="assets/press/os4gauderios-brasao-fundo-preto.jpg" target="_blank" rel="noopener"><img src="assets/web/img/press-brasao-preto.webp" alt="Brasão sobre fundo preto" loading="lazy"></a>
+        <figcaption><div><strong>Brasão fundo preto</strong><span>JPG · 2000×2000 · 0,4 MB</span></div><a class="asset-dl" href="assets/press/os4gauderios-brasao-fundo-preto.jpg" download aria-label="Baixar brasão fundo preto">↓</a></figcaption>
+      </figure>
+      <figure class="asset asset--wide" data-cat="fotos">
+        <a class="asset-thumb is-alpha" href="assets/press/os4gauderios-foto-instrumentos.png" target="_blank" rel="noopener"><img src="assets/web/img/grupo-instrumentos.webp" alt="Foto do grupo com cordeonas e baixo, sem fundo" loading="lazy"></a>
+        <figcaption><div><strong>Grupo com instrumentos</strong><span>PNG sem fundo · 1416×1111 · 2,3 MB</span></div><a class="asset-dl" href="assets/press/os4gauderios-foto-instrumentos.png" download aria-label="Baixar foto grupo com instrumentos">↓</a></figcaption>
+      </figure>
+      <figure class="asset asset--wide" data-cat="fotos">
+        <a class="asset-thumb is-alpha" href="assets/press/os4gauderios-foto-grupo.png" target="_blank" rel="noopener"><img src="assets/web/img/grupo-sentados.webp" alt="Foto do grupo reunido, sem fundo" loading="lazy"></a>
+        <figcaption><div><strong>Grupo reunido</strong><span>PNG sem fundo · 1573×1000 · 2,2 MB</span></div><a class="asset-dl" href="assets/press/os4gauderios-foto-grupo.png" download aria-label="Baixar foto grupo reunido">↓</a></figcaption>
+      </figure>
+      <figure class="asset asset--wide" data-cat="fotos">
+        <a class="asset-thumb is-alpha" href="assets/press/os4gauderios-foto-poncho.png" target="_blank" rel="noopener"><img src="assets/web/img/grupo-poncho.webp" alt="Foto do grupo de poncho e chapéu, sem fundo" loading="lazy"></a>
+        <figcaption><div><strong>De poncho e chapéu</strong><span>PNG sem fundo · 1640×959 · 2,1 MB</span></div><a class="asset-dl" href="assets/press/os4gauderios-foto-poncho.png" download aria-label="Baixar foto de poncho e chapéu">↓</a></figcaption>
+      </figure>
+      <figure class="asset asset--wide" data-cat="frota">
+        <a class="asset-thumb is-alpha" href="assets/press/os4gauderios-onibus.png" target="_blank" rel="noopener"><img src="assets/web/img/onibus.webp" alt="Ônibus de turnê, sem fundo" loading="lazy"></a>
+        <figcaption><div><strong>Ônibus</strong><span>PNG sem fundo · 1689×931 · 1,9 MB</span></div><a class="asset-dl" href="assets/press/os4gauderios-onibus.png" download aria-label="Baixar foto do ônibus">↓</a></figcaption>
+      </figure>
+      <figure class="asset asset--wide" data-cat="frota">
+        <a class="asset-thumb is-alpha" href="assets/press/os4gauderios-caminhao.png" target="_blank" rel="noopener"><img src="assets/web/img/caminhao.webp" alt="Caminhão de turnê, sem fundo" loading="lazy"></a>
+        <figcaption><div><strong>Caminhão</strong><span>PNG sem fundo · 1774×887 · 2,1 MB</span></div><a class="asset-dl" href="assets/press/os4gauderios-caminhao.png" download aria-label="Baixar foto do caminhão">↓</a></figcaption>
+      </figure>
+      <figure class="asset asset--wide" data-cat="frota">
+        <a class="asset-thumb is-alpha" href="assets/press/os4gauderios-van.png" target="_blank" rel="noopener"><img src="assets/web/img/van.webp" alt="Van da produção, sem fundo" loading="lazy"></a>
+        <figcaption><div><strong>Van</strong><span>PNG sem fundo · 1526×1030 · 2,1 MB</span></div><a class="asset-dl" href="assets/press/os4gauderios-van.png" download aria-label="Baixar foto da van">↓</a></figcaption>
+      </figure>
+    </div>
+
+    <div class="release">
+      <div class="release-copy">
+        <p class="eyebrow">Release</p>
+        <p id="releaseText">Os 4 Gaudérios iniciaram sua trajetória em 17 de agosto de 1997, em Erechim, no Alto Uruguai gaúcho. Com repertório marcado pela vaneira e pelos ritmos regionais, o grupo leva o fandango a bailes, rodeios e festas por todo o Sul, com estrutura própria de turnê e clipes oficiais como “Andejo”, “Doma de um Amor Perfeito”, “Um Beijo Embaixo do Chapéu” e “Vanera Varre Galpão”. Contratações: (54) 99917-0670 · altouruguaieventos@gmail.com.</p>
+      </div>
+      <button class="btn btn-ghost" id="copyRelease"><span>Copiar release</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- 12. REDES SOCIAIS -->
+<section class="social" id="redes">
+  <div class="wrap">
+    <div class="social-head">
+      <div>
+        <p class="eyebrow">Redes sociais</p>
+        <h2 class="display">Siga<br><em>a tropa.</em></h2>
+      </div>
+      <a class="social-handle" data-link="instagram" href="https://www.instagram.com/os4gauderios/" target="_blank" rel="noopener">@os4gauderios<span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="social-grid">
+      <a class="s-card s-card--instagram" data-link="instagram" href="https://www.instagram.com/os4gauderios/" target="_blank" rel="noopener">
+        <i class="ico ico--instagram"></i>
+        <strong>Instagram</strong>
+        <span>Agenda, bastidores e as artes de cada baile.</span>
+        <em>Seguir ↗</em>
+      </a>
+      <a class="s-card s-card--youtube" data-link="youtube" href="https://www.youtube.com/channel/UCXpdSMd86H9QW_qrxTTjTLw" target="_blank" rel="noopener">
+        <i class="ico ico--youtube"></i>
+        <strong>YouTube</strong>
+        <span>Clipes oficiais em 4K e shows ao vivo.</span>
+        <em>Inscrever-se ↗</em>
+      </a>
+      <a class="s-card s-card--facebook" data-link="facebook" href="https://www.facebook.com/search/top?q=Os%204%20Gaud%C3%A9rios" target="_blank" rel="noopener">
+        <i class="ico ico--facebook"></i>
+        <strong>Facebook</strong>
+        <span>Novidades, eventos e a comunidade fandangueira.</span>
+        <em>Curtir ↗</em>
+      </a>
+      <a class="s-card s-card--tiktok" data-link="tiktok" href="https://www.tiktok.com/search?q=os4gauderios" target="_blank" rel="noopener">
+        <i class="ico ico--tiktok"></i>
+        <strong>TikTok</strong>
+        <span>Os melhores momentos do baile em vídeos curtos.</span>
+        <em>Seguir ↗</em>
+      </a>
+      <a class="s-card s-card--whatsapp" data-link="whatsapp" href="https://wa.me/5554999170670" target="_blank" rel="noopener">
+        <i class="ico ico--whatsapp"></i>
+        <strong>WhatsApp</strong>
+        <span>Fale direto com a produção para contratar.</span>
+        <em>Chamar ↗</em>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 13. CONTATO -->
+<section class="contact" id="contato">
+  <div class="contact-glow" aria-hidden="true"></div>
+  <div class="wrap contact-inner">
+    <img class="contact-crest" src="assets/web/img/brasao.webp" alt="" loading="lazy" width="1100" height="1032">
+    <p class="eyebrow">Contratações</p>
+    <h2 class="display contact-title">O próximo fandango<br><em>pode ser na sua cidade.</em></h2>
+    <p class="lead">Bailes, rodeios, festas e eventos. Fale com a produção para consultar datas e condições.</p>
+    <div class="contact-actions">
+      <a class="btn btn-gold btn-lg magnetic" href="https://wa.me/5554999170670?text=Ol%C3%A1%2C%20Gilberto!%20Gostaria%20de%20consultar%20disponibilidade%20dos%204%20Gaud%C3%A9rios%20para%20um%20evento." target="_blank" rel="noopener"><span>Chamar no WhatsApp ↗</span></a>
+      <a class="btn btn-ghost btn-lg magnetic" href="https://www.instagram.com/os4gauderios/" target="_blank" rel="noopener"><span>Ver agenda no Instagram ↗</span></a>
+    </div>
+    <div class="contact-cards">
+      <a class="c-card" href="https://wa.me/5554999170670" target="_blank" rel="noopener"><span>WhatsApp · Gilberto Lima</span><strong>(54) 99917-0670</strong></a>
+      <a class="c-card" href="mailto:altouruguaieventos@gmail.com"><span>E-mail</span><strong>altouruguaieventos@gmail.com</strong></a>
+      <div class="c-card"><span>Produção</span><strong>Alto Uruguai Eventos · Erechim–RS</strong></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-word" aria-hidden="true">Os 4 Gaudérios</div>
+  <div class="wrap footer-row">
+    <span>© <span id="year"></span> Os 4 Gaudérios. Todos os direitos reservados.</span>
+    <nav class="footer-icons" aria-label="Redes e plataformas">
+      <a data-link="instagram" href="https://www.instagram.com/os4gauderios/" target="_blank" rel="noopener" aria-label="Instagram"><i class="ico ico--instagram"></i></a>
+      <a data-link="youtube" href="https://www.youtube.com/channel/UCXpdSMd86H9QW_qrxTTjTLw" target="_blank" rel="noopener" aria-label="YouTube"><i class="ico ico--youtube"></i></a>
+      <a data-link="facebook" href="https://www.facebook.com/search/top?q=Os%204%20Gaud%C3%A9rios" target="_blank" rel="noopener" aria-label="Facebook"><i class="ico ico--facebook"></i></a>
+      <a data-link="tiktok" href="https://www.tiktok.com/search?q=os4gauderios" target="_blank" rel="noopener" aria-label="TikTok"><i class="ico ico--tiktok"></i></a>
+      <span class="footer-sep" aria-hidden="true"></span>
+      <a data-link="spotify" href="https://open.spotify.com/playlist/2GgI7gHwBuifjeRIqPCsfA" target="_blank" rel="noopener" aria-label="Spotify"><i class="ico ico--spotify"></i></a>
+      <a data-link="deezer" href="https://www.deezer.com/search/Os%204%20Gaud%C3%A9rios" target="_blank" rel="noopener" aria-label="Deezer"><i class="ico ico--deezer"></i></a>
+      <a data-link="palcomp3" href="https://www.palcomp3.com.br/os4gauderiosoficial/" target="_blank" rel="noopener" aria-label="Palco MP3"><i class="ico ico--palcomp3"></i></a>
+      <a class="footer-kit" href="#divulgacao">Kit de divulgação</a>
+    </nav>
+    <span>Desenvolvido por Gardsoft</span>
+  </div>
+</footer>
+
+<!-- MINI PLAYER SPOTIFY: acompanha a página toda -->
+<div class="dock" id="dock">
+  <div class="dock-panel" id="dockPanel" aria-hidden="true">
+    <div class="dock-head">
+      <span class="dock-title"><i class="ico ico--spotify"></i> Os 4 Gaudérios no Spotify</span>
+      <button class="dock-min" id="dockMin" aria-label="Minimizar player">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <div class="dock-frame" id="dockFrame"></div>
+    <p class="dock-note">Minimize à vontade: a música continua tocando enquanto você navega.</p>
+  </div>
+  <button class="dock-btn" id="dockBtn" aria-expanded="false" aria-controls="dockPanel">
+    <span class="dock-disc" aria-hidden="true"><img src="assets/web/img/brasao-sm.webp" alt=""></span>
+    <span class="dock-text"><small>Ouça agora</small><strong>Os 4 Gaudérios</strong></span>
+    <span class="eq eq--live" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+  </button>
+</div>
+
+<a class="float-wa magnetic" href="https://wa.me/5554999170670" target="_blank" rel="noopener" aria-label="Falar com a produção pelo WhatsApp">
+  <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+  <span>Contratações</span>
+</a>
+
+<!-- MODAL DE PRÉVIA -->
+<dialog class="modal" id="modal" aria-label="Prévia do clipe">
+  <div class="modal-box">
+    <div class="modal-head">
+      <p class="eyebrow">Trecho do clipe</p>
+      <h3 id="modalTitle"></h3>
+      <button class="modal-close" id="modalClose" aria-label="Fechar">×</button>
+    </div>
+    <video id="modalVideo" controls playsinline></video>
+    <a class="link-arrow" href="https://www.youtube.com/channel/UCXpdSMd86H9QW_qrxTTjTLw" target="_blank" rel="noopener">Assistir completo no YouTube <span>↗</span></a>
+  </div>
+</dialog>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/agenda.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
